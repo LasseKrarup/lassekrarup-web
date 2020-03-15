@@ -41,8 +41,16 @@ export default {
    */
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    'nuxt-buefy'
+    'nuxt-buefy',
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    // your settings here
+    sass: [],
+    scss: ['~/assets/scss/_variables.scss'],
+    less: [],
+    stylus: []
+  },
   buefy: {
     css: false
   },

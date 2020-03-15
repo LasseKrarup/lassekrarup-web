@@ -1,10 +1,8 @@
 <template>
-  <section class="hero is-primary is-fullheight">
+  <section class="hero is-primary is-fullheight-with-navbar">
     <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          {{ title }}
-        </h1>
+      <div class="container is-vcentered is-flex">
+        <img src="~/assets/img/svg/LK_logo_white_text.svg" width="800px">
       </div>
     </div>
   </section>
@@ -20,5 +18,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.hero-body .container img{
+  margin: auto;
+}
 </style>
