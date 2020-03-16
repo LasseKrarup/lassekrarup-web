@@ -2,15 +2,19 @@
   <div>
     <Navbar :links="links" />
     <nuxt />
+    <Footer :links="links" />
   </div>
 </template>
 
 <script lang="ts">
+import Vue from 'vue'
 import Navbar from '~/components/Navbar.vue'
+import Footer from '~/components/Footer.vue'
 
-export default {
+export default Vue.extend({
   components: {
-    Navbar
+    Navbar,
+    Footer
   },
   data: () => ({
     links: [
@@ -32,5 +36,5 @@ export default {
       }
     ]
   })
-}
+})
 </script>
