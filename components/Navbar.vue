@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <nuxt-link class="navbar-item" to="/">
         <img src="~/assets/img/svg/LK_logo_white.svg" height="3rem" alt="Logo">
@@ -45,6 +45,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.navbar {
+  box-sizing: border-box !important;
+  height: 4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
 .navbar-item {
   img {
     max-height: 3rem;
