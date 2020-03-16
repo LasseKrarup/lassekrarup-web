@@ -51,9 +51,12 @@ div.content {
   &.animated {
     opacity: 0;
   }
-  width: 60vw;
   text-align: justify;
   padding-top: 2rem;
+
+  @media screen and (min-width: $desktop){
+    width: 60vw;
+  }
 
   &.loaded {
     opacity: 1;
