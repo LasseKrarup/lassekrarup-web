@@ -47,12 +47,13 @@ export default {
   styleResources: {
     // your settings here
     sass: [],
-    scss: ['~/assets/scss/_variables.scss', '~/assets/scss/_keyframes.scss'],
+    scss: ['~/assets/scss/_variables.scss', '~/assets/scss/_keyframes.scss', '~/assets/scss/_mixins.scss'],
     less: [],
     stylus: []
   },
   buefy: {
-    css: false
+    css: false,
+    materialDesignIconsHRef: '//cdn.materialdesignicons.com/5.0.45/css/materialdesignicons.min.css'
   },
   /*
    ** Build configuration
