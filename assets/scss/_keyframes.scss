@@ -3,7 +3,7 @@
     opacity: 0;
     transform: translateX(-3rem);
   }
-  50% {
+  20% {
     opacity: 0;
     transform: translateX(-3rem);
   }
@@ -17,7 +17,7 @@
     opacity: 0;
     transform: translateX(3rem);
   }
-  50% {
+  20% {
     opacity: 0;
     transform: translateX(3rem);
   }
@@ -31,7 +31,7 @@
     opacity: 0;
     transform: translateY(-3rem);
   }
-  50% {
+  20% {
     opacity: 0;
     transform: translateY(-3rem);
   }
@@ -45,7 +45,7 @@
     opacity: 0;
     transform: translateY(3rem);
   }
-  50% {
+  20% {
     opacity: 0;
     transform: translateY(3rem);
   }
@@ -59,16 +59,16 @@
   0% {
     transform: rotate(45deg) translate(-50%, 0);
   }
-  60% {
-    transform: rotate(45deg) translate(-50%, 0);
-  }
-  70% {
-    transform: rotate(45deg) translate(calc(-50% + 0.5rem), 0.5rem);
-  }
   80% {
     transform: rotate(45deg) translate(-50%, 0);
   }
+  85% {
+    transform: rotate(45deg) translate(calc(-50% + 0.5rem), 0.5rem);
+  }
   90% {
+    transform: rotate(45deg) translate(-50%, 0);
+  }
+  95% {
     transform: rotate(45deg) translate(calc(-50% + 0.5rem), 0.5rem);
   }
   100% {

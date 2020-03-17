@@ -44,6 +44,10 @@ export default Vue.extend({
     }
 }
 
+.section {
+  min-height: 20vh;
+}
+
 section.is-primary {
   background-color: $primary;
   color: $primary-invert;

@@ -52,7 +52,7 @@ export default Vue.extend({
           path: '#'
         },
         {
-          name: 'git',
+          name: 'github',
           path: '#'
         },
         {

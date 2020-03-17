@@ -70,7 +70,7 @@ div.content {
 }
 
 .animated {
-  transition: transform 1.5s ease-in-out 0.5s, opacity 0.5s linear 2s;
+  transition: transform 0.5s ease-in-out 0.5s, opacity 0.5s linear 1s;
 }
 
 .arrow-down {
@@ -83,11 +83,15 @@ div.content {
   position: absolute;
   box-shadow: 3px 3px 2px rgba(0,0,0,0.1);
   left: 50%;
-  bottom: 5rem;
+  bottom: 1rem;
   transform: rotate(45deg) translateX(-50%);
   z-index: 10;
   opacity: 0;
-  transition: opacity 0.5s linear 3s;
+  transition: opacity 0.5s linear 1.5s;
+
+  @include desktop {
+    bottom: 4rem;
+  }
 
   &.loaded {
     opacity: 1;

@@ -20,15 +20,15 @@ export default Vue.extend({
 
 <style lang="scss">
 .animated-left {
-    animation: 2s ease-out fadein-left;
+    animation: 1s ease-out fadein-left;
 }
 .animated-right {
-    animation: 2s ease-out fadein-right;
+    animation: 1s ease-out fadein-right;
 }
 .animated-top {
-    animation: 2s ease-out fadein-top;
+    animation: 1s ease-out fadein-top;
 }
 .animated-bottom {
-    animation: 2s ease-out fadein-bottom;
+    animation: 1s ease-out fadein-bottom;
 }
 </style>
