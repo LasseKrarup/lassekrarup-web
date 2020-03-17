@@ -1,8 +1,64 @@
-// Custom variables go between here -----
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// COLORS HERE -----------
+$primary: #8c67ef;
+$primary-invert: findColorInvert($primary);
+$twitter: #4099ff;
+$twitter-invert: findColorInvert($twitter);
+$footer-background-color: $dark;
+// --------------------------
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+  "white": (
+    $white,
+    $black
+  ),
+  "black": (
+    $black,
+    $white
+  ),
+  "light": (
+    $light,
+    $light-invert
+  ),
+  "dark": (
+    $dark,
+    $dark-invert
+  ),
+  "primary": (
+    $primary,
+    $primary-invert
+  ),
+  "info": (
+    $info,
+    $info-invert
+  ),
+  "success": (
+    $success,
+    $success-invert
+  ),
+  "warning": (
+    $warning,
+    $warning-invert
+  ),
+  "danger": (
+    $danger,
+    $danger-invert
+  ),
+  "twitter": (
+    $twitter,
+    $twitter-invert
+  )
+);
+
+// Links
+$link: $success;
+$link-invert: $success-invert;
+$link-focus-border: $success;
 
 $navbar-height: 4rem;
-
-// ------------ and here -------------
 
 // Import Bulma and Buefy styles
 @import "~bulma";
