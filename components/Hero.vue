@@ -10,13 +10,19 @@
         </div>
       </div>
     </div>
+    <div v-if="arrow" class="arrow-down" :class="{ 'loaded': isLoaded }" />
   </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
+  name: 'Hero',
   props: {
+    arrow: {
+      type: Boolean,
+      default: false
+    }
   },
   data () {
     return ({
@@ -65,5 +71,27 @@ div.content {
 
 .animated {
   transition: transform 1.5s ease-in-out 0.5s, opacity 0.5s linear 2s;
+}
+
+.arrow-down {
+  background-color: transparent;
+  width: 3rem;
+  height: 3rem;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  border-color: rgba($white, 0.3);
+  position: absolute;
+  box-shadow: 3px 3px 2px rgba(0,0,0,0.1);
+  left: 50%;
+  bottom: 5rem;
+  transform: rotate(45deg) translateX(-50%);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.5s linear 3s;
+
+  &.loaded {
+    opacity: 1;
+    animation: 2s ease-out infinite bounce;
+  }
 }
 </style>
