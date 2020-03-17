@@ -47,7 +47,7 @@ export default {
   styleResources: {
     // your settings here
     sass: [],
-    scss: ['~/assets/scss/_variables.scss'],
+    scss: ['~/assets/scss/_variables.scss', '~/assets/scss/_keyframes.scss'],
     less: [],
     stylus: []
   },
