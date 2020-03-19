@@ -70,7 +70,7 @@ div.content {
 }
 
 .animated {
-  transition: transform 0.5s ease-in-out 0.5s, opacity 0.5s linear 1s;
+  transition: transform ease-in-out 0.5s, opacity 0.5s linear 0.5s;
 }
 
 .arrow-down {
