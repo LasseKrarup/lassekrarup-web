@@ -1,5 +1,5 @@
 <template>
-  <div class="column" :class="'animated-' + direction">
+  <div class="column animated" :style="style" :class="'animated-' + direction">
     <slot />
   </div>
 </template>
@@ -13,22 +13,39 @@ export default Vue.extend({
     direction: {
       type: String,
       default: 'left'
+    },
+    delay: {
+      type: String,
+      default: '0'
+    }
+  },
+  computed: {
+    style () {
+      if (typeof (this.delay) !== 'string') {
+        return '0s'
+      } else {
+        const str = this.delay.split('s')
+        return ('animation-delay: ' + str[0] + 's')
+      }
     }
   }
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.animated {
+  opacity: 0;
+}
 .animated-left {
-    animation: 1s ease-out fadein-left;
+    animation: 1s ease-out forwards fadein-left;
 }
 .animated-right {
-    animation: 1s ease-out fadein-right;
+    animation: 1s ease-out forwards fadein-right;
 }
 .animated-top {
-    animation: 1s ease-out fadein-top;
+    animation: 1s ease-out forwards fadein-top;
 }
 .animated-bottom {
-    animation: 1s ease-out fadein-bottom;
+    animation: 1s ease-out forwards fadein-bottom;
 }
 </style>

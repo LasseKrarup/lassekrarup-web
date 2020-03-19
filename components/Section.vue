@@ -1,8 +1,8 @@
 <template>
-  <section class="section">
-    <div ref="wrapper" />
+  <section class="section" :style="styleObject" :class="overlayColor === undefined ? '' : 'overlay'">
+    <div ref="wrapper" class="wrapper" :style="'background-color: ' + overlayColor" />
     <div class="container" :class=" { 'is-intersected': isIntersected} ">
-      <div class="columns">
+      <div class="columns" :class="{ 'is-vcentered': vcenter }">
         <slot />
       </div>
     </div>
@@ -14,10 +14,38 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'Section',
+  props: {
+    background: {
+      type: String,
+      default: undefined
+    },
+    vcenter: {
+      type: Boolean,
+      default: false
+    },
+    overlayColor: {
+      type: String,
+      default: undefined
+    }
+  },
   data () {
     return ({
       isIntersected: false
     })
+  },
+  computed: {
+    styleObject () {
+      if (this.background === undefined) {
+        return null
+      } else {
+        return ({
+          backgroundImage: 'url(' + this.background + ')',
+          backgroundRepeat: 'none',
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed'
+        })
+      }
+    }
   },
   mounted () {
     const options = {
@@ -25,6 +53,7 @@ export default Vue.extend({
     }
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].intersectionRatio > 0) {
+        // @ts-ignore
         this.isIntersected = true
       }
     }, options)
@@ -35,7 +64,7 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .container {
     display: none;
 
@@ -45,15 +74,21 @@ export default Vue.extend({
 }
 
 .section {
-  min-height: 20vh;
+  min-height: 30vh;
+  position: relative;
 }
 
 section.is-primary {
   background-color: $primary;
   color: $primary-invert;
+}
 
-  h1.title {
-    color: $primary-invert;
-  }
+.wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-color is added in-line
 }
 </style>
