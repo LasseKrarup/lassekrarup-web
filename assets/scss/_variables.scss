@@ -2,8 +2,12 @@
 @import "~bulma/sass/utilities/_all";
 
 // COLORS HERE -----------
-$primary: #8c67ef;
+$primary: #4d16bc;
 $primary-invert: findColorInvert($primary);
+$info: #1632bc;
+$info-invert: findColorInvert($info);
+$success: #05b225;
+$success-invert: findColorInvert($success);
 $twitter: #4099ff;
 $twitter-invert: findColorInvert($twitter);
 $footer-background-color: $dark;
