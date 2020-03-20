@@ -85,6 +85,9 @@ export default Vue.extend({
   &.is-primary {
     background-color: transparent !important;
   }
+  &.is-info {
+    background-color: rgba($info, 0.9);
+  }
 
   &.has-scrolled {
     box-shadow: 0 0 5px rgba(0,0,0,0.5);

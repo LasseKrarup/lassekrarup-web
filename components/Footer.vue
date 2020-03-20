@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="columns">
-      <div class="column content is-3">
+      <div class="column content is-4">
         <ul>
           <li v-for="(link, idx) in links" :key="idx">
             <nuxt-link :to="link.path">
@@ -13,7 +13,7 @@
           </li>
         </ul>
       </div>
-      <div class="column is-3">
+      <div class="column is-4">
         <div class="content has-text-centered">
           <a v-for="(icon, idx) in icons" :key="idx" :href="icon.path" class="button social-icon is-success is-outlined">
             <span class="icon">
@@ -25,7 +25,7 @@
           </p>
         </div>
       </div>
-      <div class="column is-3" />
+      <div class="column is-4" />
     </div>
   </footer>
 </template>
@@ -93,4 +93,19 @@ a.disabled-link {
     justify-content: center;
     align-items: center;
 }
+
+li {
+  display: inline;
+  list-style: none;
+
+  &::after {
+    content: "|";
+    margin: 0 0.5rem;
+  }
+
+  &:last-child::after {
+    content: none;
+  }
+}
+
 </style>
