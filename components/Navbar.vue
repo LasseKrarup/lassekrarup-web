@@ -1,8 +1,8 @@
 <template>
-  <nav class="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation" :class="{ 'has-scrolled': hasScrolled }">
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" :class="classObject">
     <div class="navbar-brand">
-      <nuxt-link class="navbar-item" to="/">
-        <img class="logo" src="~/assets/img/svg/LK_logo_white.svg" :class="{ 'has-scrolled': hasScrolled }" alt="Logo">
+      <nuxt-link class="navbar-item" :class="{ 'has-scrolled': hasScrolled }" to="/">
+        <img class="logo" src="~/assets/img/svg/LK_logo_white.svg" alt="Logo">
       </nuxt-link>
       <a
         role="button"
@@ -45,6 +45,18 @@ export default Vue.extend({
       hasScrolled: false
     })
   },
+  computed: {
+    classObject () {
+      return ({
+        // @ts-ignore
+        'has-scrolled': this.hasScrolled,
+        // @ts-ignore
+        'is-primary': !this.hasScrolled,
+        // @ts-ignore
+        'is-info': this.hasScrolled
+      })
+    }
+  },
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
@@ -64,39 +76,41 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-$light-background: lighten($primary, 5%);
-
 .navbar {
   box-sizing: border-box !important;
   height: 4rem;
   border-bottom: 1px solid rgba(255,255,255,0.3);
+  transition: all 0.5s ease-in;
 
-  transition-property: all, transform;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-
-  .logo {
-    transition: all 0.5s ease-in-out;
-    max-height: 3rem;
-    height: 3rem;
-
-    @media screen and (min-width: $desktop){
-      &.has-scrolled {
-        height: 4rem;
-        max-height: 4rem;
-      }
-    }
+  &.is-primary {
+    background-color: transparent !important;
   }
 
   &.has-scrolled {
-    background-color: $light-background;
-    border-color: $light-background;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
 
     @media screen and (min-width: $desktop) {
       height: 5rem;
       font-size: 1.2rem;
     }
+  }
+}
+
+.navbar-brand {
+  a {
+    transition: transform 0.5s ease-in;
+    transform: translateX(-4rem);
+
+    &.has-scrolled {
+      transform: translateX(0);
+    }
+  }
+}
+
+img {
+  &.logo {
+    max-height: 3rem !important;
+    height: 3rem !important;
   }
 }
 </style>
