@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Hero class="is-medium is-primary" :background="require('~/assets/img/svg/alt-bg-graphic.svg')">
+    <Hero class="is-large is-primary" :background="require('~/assets/img/svg/alt-bg-graphic.svg')">
       <template #second>
         <h1 class="title is-1">
           {{ title }}

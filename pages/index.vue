@@ -84,6 +84,25 @@
         </div>
       </Column>
     </Section>
+
+    <Section overlay-color="rgba(30,30,200,0.7)" class="design-section">
+      <Column direction="top" class="has-text-centered">
+        <h2 class="subtitle is-3 has-text-white">
+          Hire me as a webdesigner
+        </h2>
+
+        <div class="content">
+          <ul>
+            <li v-for="(icon, idx) in designIcons" :key="idx">
+              <span class="icon">
+                <i class="mdi" :class="'mdi-' + icon.name" />
+              </span>
+              {{ icon.description }}
+            </li>
+          </ul>
+        </div>
+      </Column>
+    </Section>
   </div>
 </template>
 
@@ -121,9 +140,20 @@ export default Vue.extend({
           description: "We'll create an effective and fun practice scheme to bolster your skills"
         }
       ],
-      designIcons: {
-
-      }
+      designIcons: [
+        {
+          name: 'music-circle-outline',
+          description: 'Lessons with an emphasis on musicality, tailored to your individual needs'
+        },
+        {
+          name: 'music-clef-treble',
+          description: 'Rhythm training, drum technique and being the drummer people want to actually play with'
+        },
+        {
+          name: 'playlist-check',
+          description: "We'll create an effective and fun practice scheme to bolster your skills"
+        }
+      ]
     })
   },
   head () {
@@ -137,28 +167,38 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-$icon-margin: 1rem;
+$icon-margin: 2rem;
 
 ul {
   display: flex;
+  align-items: baseline;
 }
 
 li {
+  box-sizing: border-box;
+  margin: 0 1rem;
+  background-color: rgba($info, 0.3);
+  color: rgba($black,0.7);
+  border-radius: 10px;
   list-style: none;
   text-decoration: none;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: justify;
-  padding: 0 2rem;
+  padding: 2rem;
+
+  &.design-section {
+    color: white;
+  }
 }
 
 .icon {
   margin: $icon-margin 0;
 
   i {
-    font-size: 3rem;
-    color: rgba(0,0,0,0.4);
+    font-size: 4rem;
   }
 }
 </style>
