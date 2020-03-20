@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section class="hero" :style="{'background-image': bgUrl}">
     <div class="hero-body">
       <div class="container animated" :class="{ 'loaded': isLoaded }">
         <div>
@@ -22,6 +22,10 @@ export default Vue.extend({
     arrow: {
       type: Boolean,
       default: false
+    },
+    background: {
+      type: String,
+      default: require('~/assets/img/svg/frontpage-bg-graphic.svg')
     }
   },
   data () {
@@ -29,22 +33,48 @@ export default Vue.extend({
       isLoaded: false
     })
   },
+  computed: {
+    bgUrl () {
+      if (this.background === undefined) { return }
+
+      return ('url(' + this.background + ')')
+    }
+  },
   mounted () {
+    // @ts-ignore
     this.isLoaded = true
   }
 })
 </script>
 
 <style lang="scss" scoped>
+.hero {
+  background-size: cover;
+  // background-attachment: fixed;
+  background-color: red;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
 .hero-body .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateY(4rem);
+  animation: 0.5s ease-in-out slidein-bottom;
+  animation-fill-mode: both;
+  animation-play-state: paused;
 
   &.loaded {
-    transform: translateY(0);
+    animation-play-state: running;
   }
 
   img {
@@ -55,7 +85,15 @@ export default Vue.extend({
 
 div.content {
   &.animated {
-    opacity: 0;
+    // opacity: 0;
+    animation: 0.5s ease-in-out fadein;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+    animation-delay: 0.5s;
+
+    &.loaded {
+      animation-play-state: running;
+    }
   }
   text-align: justify;
   padding-top: 2rem;
@@ -64,9 +102,9 @@ div.content {
     width: 60vw;
   }
 
-  &.loaded {
-    opacity: 1;
-  }
+  // &.loaded {
+  //   opacity: 1;
+  // }
 }
 
 .animated {
@@ -86,16 +124,26 @@ div.content {
   bottom: 1rem;
   transform: rotate(45deg) translateX(-50%);
   z-index: 10;
-  opacity: 0;
-  transition: opacity 0.5s linear 1.5s;
+  // opacity: 0;
+  // transition: opacity 0.5s linear 1.5s;
 
   @include desktop {
     bottom: 4rem;
   }
 
+  // animation: 0.5s ease-in-out slidein-bottom;
+  animation-name: fadein, bounce;
+  animation-duration: 0.5s, 2s;
+  animation-delay: 3s, 0;
+  animation-timing-function: ease-in-out, ease-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+
   &.loaded {
-    opacity: 1;
-    animation: 2s ease-out infinite bounce;
+    animation-play-state: running;
+    // opacity: 1;
+    // animation: 2s ease-out infinite bounce;
   }
 }
 </style>
