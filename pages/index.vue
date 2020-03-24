@@ -17,7 +17,7 @@
         <div class="columns content is-vcentered">
           <div class="column has-text-centered">
             <nuxt-link class="button is-large  is-danger is-outlined" to="/music">
-              Read about my music
+              Hear my music
             </nuxt-link>
           </div>
           <div class="column has-text-centered">
@@ -29,25 +29,42 @@
       </template>
     </Hero>
 
-    <Section>
-      <Column delay="0.2s">
+    <Section vcenter>
+      <Column direction="left">
         <h2 class="subtitle is-3">
           Drummer and session musician
         </h2>
         <p class="content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quos nobis at illum debitis! Quam quae aut unde, ad saepe at recusandae in eveniet quibusdam omnis possimus esse alias beatae, excepturi repudiandae facere soluta nulla accusantium? Recusandae deserunt eligendi, magnam sed mollitia voluptatibus alias velit reprehenderit perferendis modi voluptate facere?
+          I've been playing drums since I was 10 years old and along the way I have picked up skills and experiences in drumming as well as composition, band leading, studio recording and gigging. I play more than 40 concerts a year with my different bands and projects.
         </p>
 
         <p class="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni perferendis beatae eaque tempora quas minus alias, nulla quis ratione doloremque sapiente sunt vitae iste dolorem inventore enim veniam? Quia itaque ullam eaque distinctio numquam, dolores expedita quasi, quidem officia, quod dolorem ratione sunt. Earum, odio similique. Asperiores recusandae quia neque!
+          I'm a gear nerd and I'm pretty tech savvy - I used to study electronical engineering, and I build music related tech stuff as well. Amplifiers, speakers, effect pedals... <br>
+          I do tracking, studio engineering and mixing as well.
+        </p>
+
+        <p class="content">
+          <nuxt-link class="button is-outlined is-medium is-danger" to="/music">
+            Read more
+          </nuxt-link>
         </p>
       </Column>
-      <Column direction="right" delay="0.5s">
-        <img src="~/assets/img/close-up-photo-of-drum-set-995301.jpg" alt="Drummer">
-      </Column>
+      <Column
+        delay="0.5s"
+        direction="right"
+      >
+        <img src="~assets/img/train-lhk.jpg" alt="Lasse Krarup at Train in Aarhus">
+      </column>
     </Section>
 
-    <Section class="is-primary" :background="images[0]" vcenter overlay-color="rgba(30,30,200,0.8)">
+    <Section
+      class="is-primary"
+      :background="images[0]"
+      style="background-position: center;"
+      wrap-reverse
+      vcenter
+      overlay-color="rgba(0,0,0,0.1)"
+    >
       <Column direction="bottom" delay="0.8s" class="has-text-centered">
         <nuxt-link class="button is-outlined is-large is-success" to="/webdesign">
           See my work here
@@ -55,53 +72,16 @@
       </Column>
       <Column direction="bottom">
         <h2 class="subtitle is-3 has-text-white">
-          Gain online presence instantly
+          Websites and design
         </h2>
         <p class="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi consequatur qui fugit cum minima rerum perferendis rem, consectetur aliquam repudiandae earum, natus porro repellat, aliquid corporis at tempora quo officiis soluta quaerat. Accusantium sit obcaecati quidem exercitationem nobis non quaerat.
+          My web design speciality lies in building web pages and graphical design for musicians and bands. I've made tons of web pages for musicians, and I've - obviously - done the websites for the bands I play in myself. I know what aesthetics work well for musicians, and I can channel your music to a fitting design.
         </p>
+
         <p class="content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium itaque amet aliquam dolore provident deleniti, consectetur quos. Eius, sed. Mollitia reprehenderit praesentium sed sit hic expedita doloremque dolore dolores numquam, quidem possimus? Aut, ea animi! Quidem tenetur excepturi, molestias necessitatibus at aut repellendus expedita, quo vitae doloribus vel maiores quod!
+          Although I've done most of my work with musicians, I do websites for all sorts of businesses and companies. I do both WordPress-based sites, where you can edit the content yoursef, or custom websites coded from scratch - like this one.
         </p>
       </column>
-    </Section>
-
-    <Section>
-      <Column direction="top" class="has-text-centered">
-        <h2 class="subtitle is-3">
-          Hire me as a teacher
-        </h2>
-
-        <div class="content">
-          <ul>
-            <li v-for="(icon, idx) in musicIcons" :key="idx">
-              <span class="icon">
-                <i class="mdi" :class="'mdi-' + icon.name" />
-              </span>
-              {{ icon.description }}
-            </li>
-          </ul>
-        </div>
-      </Column>
-    </Section>
-
-    <Section overlay-color="rgba(30,30,200,0.7)" class="design-section">
-      <Column direction="top" class="has-text-centered">
-        <h2 class="subtitle is-3 has-text-white">
-          Hire me as a webdesigner
-        </h2>
-
-        <div class="content">
-          <ul>
-            <li v-for="(icon, idx) in designIcons" :key="idx">
-              <span class="icon">
-                <i class="mdi" :class="'mdi-' + icon.name" />
-              </span>
-              {{ icon.description }}
-            </li>
-          </ul>
-        </div>
-      </Column>
     </Section>
   </div>
 </template>
@@ -123,7 +103,7 @@ export default Vue.extend({
     return ({
       title: 'Become seen. And heard.',
       images: [
-        require('~/assets/img/apple-computer-decor-design-326502.jpg'),
+        require('~/assets/img/svg/swatch.svg'),
         require('~/assets/img/svg/frontpage-bg-graphic.svg')
       ],
       musicIcons: [
@@ -200,5 +180,9 @@ li {
   i {
     font-size: 4rem;
   }
+}
+
+.button.is-large {
+  min-width: 280px;
 }
 </style>

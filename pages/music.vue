@@ -12,6 +12,17 @@
       </template>
     </Hero>
 
+    <Section>
+      <Column class="center-content">
+        <h2 class="subtitle is-3">
+          Projects and bands
+        </h2>
+        <h2 class="subtitle is-5">
+          The stuff that I tour and record with
+        </h2>
+      </Column>
+    </Section>
+
     <Section style="background-color: #241e20" class="has-text-white">
       <Column class="center-content" direction="none">
         <img :src="images[0]" alt="lightbulb" width="60%">
@@ -23,22 +34,16 @@
           </h2>
 
           <p class="content">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet nobis, amet rerum facere quam itaque quae quasi fugit est reprehenderit. Vel, aliquam, eligendi dignissimos molestiae, expedita pariatur nostrum unde deserunt doloremque quae laudantium ea minus sed quisquam ipsum fuga non fugit illum omnis quaerat delectus maxime dolore excepturi ab? Cum.
+            If you like my stuff, don't hesitate to contact me for lessons. I do lessons in both Aalborg and Aarhus (DK) as well as video lessons online.
+          </p>
+          <p class="content">
+            I like to focus on <i>musicality</i> above all. All the technique and speed in the world is useless if you don't know how to play music. Of course I teach technique as well, but there's always a focus towards using technical skills musically.
+          </p>
+          <p class="content">
+            If you wan't to be the most hardcore gospel chopper known to man, then maybe I'm not your guy. But if you want to be the drummer that everybody wants to <b>play with</b> - hit me up.
           </p>
         </div>
       </Column>
-    </Section>
-
-    <Section class="is-primary">
-      <Column>
-        <h1 class="title">
-          Testy titleface
-        </h1>
-        <p class="content">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet nobis, amet rerum facere quam itaque quae quasi fugit est reprehenderit. Vel, aliquam, eligendi dignissimos molestiae, expedita pariatur nostrum unde deserunt doloremque quae laudantium ea minus sed quisquam ipsum fuga non fugit illum omnis quaerat delectus maxime dolore excepturi ab? Cum.
-        </p>
-      </Column>
-      <Column />
     </Section>
   </div>
 </template>
