@@ -5,10 +5,9 @@
         <h1 class="title is-1">
           {{ title }}
         </h1>
-
-        <p class="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima sunt voluptatum necessitatibus dolore fugiat, obcaecati amet aliquam veniam delectus natus libero cupiditate, eaque modi aut sed nemo pariatur dignissimos.
-        </p>
+        <h2 class="subtitle is-3">
+          ...drummer, composer, session musician and teacher
+        </h2>
       </template>
     </Hero>
 
@@ -20,6 +19,21 @@
         <h2 class="subtitle is-5">
           The stuff that I tour and record with
         </h2>
+        <div class="columns">
+          <div v-for="(band, idx) in bands" :key="idx" class="band-card column is-4" :style="('background-image: url(' + band.image + ');') + (band.cover ? 'background-size: cover;' : '')">
+            <div class="card-content">
+              <h2 class="subtitle is-5 has-text-white">
+                {{ band.name }}
+              </h2>
+              <p class="content">
+                {{ band.description }}
+              </p>
+              <a v-if="band.link !== undefined" class="content button is-outlined is-danger" :href="band.link">
+                Read about {{ band.name }}
+              </a>
+            </div>
+          </div>
+        </div>
       </Column>
     </Section>
 
@@ -63,8 +77,27 @@ export default Vue.extend({
   },
   data () {
     return ({
-      title: 'I teach, I gig, and I record',
-      images: [require('~/assets/img/close-up-photo-ofg-light-bulb-716398.jpg')]
+      title: "I'm a musician",
+      images: [require('~/assets/img/close-up-photo-ofg-light-bulb-716398.jpg')],
+      bands: [
+        {
+          name: 'In Caravans',
+          description: 'A concert with In Caravans is like a 200 MPH road trip through the desert in a truck without brakes, passing through eerie and mysterious sceneries. Atmospheric, yet straight to the point, In Caravans alternates between fleeting emotion and no-nonsense indie rock.',
+          link: 'http://www.incaravans.com',
+          image: require('~/assets/img/InCaravansHeader-min.jpg')
+        },
+        {
+          name: 'MARCE',
+          description: 'With inspiration from both the newer Indie scene and the old folk tradition, they create a separate and unique univers. MARCE are not afraid to take their time in the music, but their refined and thourough sound keeps the audience engaged.',
+          image: require('~/assets/img/svg/MARCE.svg')
+        },
+        {
+          name: 'Spraglgevær',
+          description: 'With inspiration from both the newer Indie scene and the old folk tradition, they create a separate and unique univers. MARCE are not afraid to take their time in the music, but their refined and thourough sound keeps the audience engaged.',
+          image: require('~/assets/img/spraglgevaer.jpg'),
+          cover: true
+        }
+      ]
     })
   },
   head () {
@@ -83,5 +116,57 @@ export default Vue.extend({
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.band-card {
+  margin: 1rem;
+  color: white;
+  background-color: #0d0d0d;
+  background-position: center;
+  background-repeat: no-repeat;
+  // background-origin: padding-box;
+  background-size: contain;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    transition: all linear 0.2s;
+
+    @include desktop() {
+      background-color: transparent;
+    }
+  }
+
+  .card-content {
+    position: relative;
+    height: 100%;
+
+    @include desktop() {
+      transform: translateY(100%);
+      transition: all linear 0.2s;
+    }
+  }
+
+  @include desktop() {
+    &:hover {
+      .card-content {
+        transform: translateY(0);
+      }
+
+      &::before {
+        background-color: rgba(0,0,0,0.7);
+      }
+    }
+  }
 }
 </style>
