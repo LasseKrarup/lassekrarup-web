@@ -52,6 +52,7 @@ export default Vue.extend({
   background-size: cover;
   // background-attachment: fixed;
   background-color: red;
+  position: relative;
 
   &::before {
     content: "";
