@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" :class="classObject">
     <div class="navbar-brand">
-      <nuxt-link class="navbar-item" :class="{ 'has-scrolled': hasScrolled }" to="/">
+      <nuxt-link id="logo-link" class="navbar-item" :class="{ 'has-scrolled': hasScrolled }" to="/">
         <img class="logo" src="~/assets/img/svg/LK_logo_white.svg" alt="Logo">
       </nuxt-link>
       <a
@@ -18,12 +18,12 @@
       </a>
     </div>
     <div class="navbar-menu" :class="{ 'is-active': isActive }">
-      <div class="navbar-start" />
-      <div class="navbar-end">
+      <div class="navbar-start">
         <nuxt-link v-for="(link, idx) in links" :key="idx" class="navbar-item" :to="link.path" @click.native="function(){isActive = false}">
           {{ link.name }}
         </nuxt-link>
       </div>
+      <div class="navbar-end" />
     </div>
   </nav>
 </template>
@@ -80,7 +80,7 @@ export default Vue.extend({
   box-sizing: border-box !important;
   height: 4rem;
   border-bottom: 1px solid rgba(255,255,255,0.3);
-  transition: all 0.5s ease-in;
+  transition: all 0.25s ease-in;
 
   &.is-primary {
     background-color: transparent !important;
@@ -100,8 +100,8 @@ export default Vue.extend({
 }
 
 .navbar-brand {
-  a {
-    transition: transform 0.5s ease-in;
+  a#logo-link {
+    transition: transform 0.25s ease-in;
     transform: translateX(-4rem);
 
     &.has-scrolled {

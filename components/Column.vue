@@ -38,9 +38,10 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-// .animated {
-//   opacity: 0;
-// }
+.column {
+  padding: 1.5rem!important;
+}
+
 .animated-left {
     animation: 1s ease-out both fadein-left;
 }

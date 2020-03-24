@@ -1,8 +1,8 @@
 <template>
   <section class="section" :style="styleObject" :class="overlayColor === undefined ? '' : 'overlay'">
-    <div ref="wrapper" class="wrapper" :style="'background-color: ' + overlayColor" />
+    <div ref="wrapper" class="wrapper" :style="overlayColor === undefined ? '' : 'background-color: ' + overlayColor" />
     <div class="container" :class=" { 'is-intersected': isIntersected} ">
-      <div class="columns" :class="{ 'is-vcentered': vcenter }">
+      <div class="columns" :class="{'is-vcentered': vcenter, 'is-flex': isFlex}" :style="wrapReverse ? 'flex-wrap: wrap-reverse;':''">
         <slot />
       </div>
     </div>
@@ -26,6 +26,10 @@ export default Vue.extend({
     overlayColor: {
       type: String,
       default: undefined
+    },
+    wrapReverse: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -45,6 +49,9 @@ export default Vue.extend({
           backgroundAttachment: 'fixed'
         })
       }
+    },
+    isFlex () {
+      if (this.wrapReverse) { return true } else { return false }
     }
   },
   mounted () {
@@ -71,6 +78,9 @@ export default Vue.extend({
     &.is-intersected {
         display: block;
     }
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .section {
