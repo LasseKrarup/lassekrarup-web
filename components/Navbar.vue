@@ -116,4 +116,19 @@ img {
     height: 3rem !important;
   }
 }
+
+.nuxt-link-exact-active:not(#logo-link) {
+  // color: #aaa !important;
+
+  &::after {
+    content: "";
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid white;
+  }
+}
 </style>
