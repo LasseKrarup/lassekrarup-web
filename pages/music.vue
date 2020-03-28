@@ -19,18 +19,35 @@
         <h2 class="subtitle is-5">
           The stuff that I tour and record with
         </h2>
-        <div class="columns">
-          <div v-for="(band, idx) in bands" :key="idx" class="band-card column is-4" :style="('background-image: url(' + band.image + ');') + (band.cover ? 'background-size: cover;' : '')">
-            <div class="card-content">
-              <h2 class="subtitle is-5 has-text-white">
-                {{ band.name }}
-              </h2>
-              <p class="content">
-                {{ band.description }}
-              </p>
-              <a v-if="band.link !== undefined" class="content button is-outlined is-danger" :href="band.link">
-                Read about {{ band.name }}
-              </a>
+        <p class="has-text-grey scroll-indicator">
+          (Hover your cursor above the images for info and scroll vertically for more projects)
+        </p>
+        <div class="carousel-container">
+          <div class="scroll-arrow scroll-arrow-left" :class="{'active': leftArrowActive}">
+            <span class="icon is-large">
+              <i class="mdi mdi-chevron-left" />
+            </span>
+          </div>
+          <div class="scroll-arrow scroll-arrow-right" :class="{'active': rightArrowActive}">
+            <span class="icon is-large">
+              <i class="mdi mdi-chevron-right" />
+            </span>
+          </div>
+          <div ref="carousel" class="columns">
+            <div v-for="(band, idx) in bands" :key="idx" class="band-card-container column is-4">
+              <div class="band-card" :style="('background-image: url(' + band.image + ');') + (band.cover ? 'background-size: cover;' : '')">
+                <div class="card-content">
+                  <h2 class="subtitle is-5 has-text-white">
+                    {{ band.name }}
+                  </h2>
+                  <p class="content">
+                    {{ band.description }}
+                  </p>
+                  <a v-if="band.link !== undefined" class="content button is-outlined is-danger" :href="band.link">
+                    Read about {{ band.name }}
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -79,6 +96,8 @@ export default Vue.extend({
     return ({
       title: "I'm a musician",
       images: [require('~/assets/img/close-up-photo-ofg-light-bulb-716398.jpg')],
+      rightArrowActive: true,
+      leftArrowActive: false,
       bands: [
         {
           name: 'In Caravans',
@@ -93,17 +112,58 @@ export default Vue.extend({
         },
         {
           name: 'Spraglgevær',
-          description: 'With inspiration from both the newer Indie scene and the old folk tradition, they create a separate and unique univers. MARCE are not afraid to take their time in the music, but their refined and thourough sound keeps the audience engaged.',
+          description: 'The sound of Spraglgevær is often melancholic yet energetic with inspiration from great danish songwriters such as Peter Sommer and Søren Huss. In the lyrics Spraglgevær seek to explore human interaction and why we often miscommunicate. One can expect a concert with plenty of energy, presence and recklessness.',
           image: require('~/assets/img/spraglgevaer.jpg'),
+          cover: true,
+          link: 'https://www.instagram.com/spraglgevaer.music/'
+        },
+        {
+          name: 'North Avenue',
+          description: "is one of Denmarks greatest cover bands. With references from both the small and large stages and all kinds of events, you'll never go wrong with North Avenue.",
+          link: 'https://www.northavenue.dk',
+          image: require('~/assets/img/NA-img-min.jpg'),
+          cover: true
+        },
+        {
+          name: 'PartyModulet',
+          description: 'PartyModulet is the perfect replacement for a DJ. We play all the pop hits that DJ Spotify knows - also the knew ones. With a repertoire filled with fresh pop music, we deliver a full fledged party experience.',
+          image: require('~/assets/img/modulet-img.jpg'),
+          link: 'http://www.modulet.dk/Party/',
           cover: true
         }
       ]
     })
   },
+  mounted () {
+    this.$refs.carousel.addEventListener('scroll', this.handleScroll)
+  },
+  // destroyed () {
+  //   this.$refs.carousel.removeEventListener('scroll')
+  // },
+  methods: {
+    handleScroll (event: { target: Element }) : void {
+      if (event.target !== null) {
+        const scrollWidth = event.target.scrollWidth
+        const scrollLeft = event.target.scrollLeft
+        const clientWidth = event.target.clientWidth
+
+        if (scrollLeft > 20) {
+          this.leftArrowActive = true
+        } else {
+          this.leftArrowActive = false
+        }
+
+        if ((scrollWidth - clientWidth - scrollLeft) > 20) {
+          this.rightArrowActive = true
+        } else {
+          this.rightArrowActive = false
+        }
+      }
+    }
+  },
   head () {
     const title:string = this.title
     return ({
-      titleTemplate: 'Lasse Krarup - %s',
       title
     })
   }
@@ -118,8 +178,72 @@ export default Vue.extend({
     justify-content: center;
 }
 
+.columns {
+  @include desktop {
+    overflow-x: scroll;
+    position: relative;
+  }
+}
+
+.band-card-container {
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+
+}
+
+.carousel-container {
+  position: relative;
+  // contain: paint;
+}
+
+.scroll-arrow {
+  display: none;
+
+  @include desktop() {
+    font-size: 3rem;
+    color: white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity ease-in 0.2s;
+
+    span {
+      border-radius: 50%;
+      background-color: rgba(0,0,0,0.8) !important;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+
+    &.scroll-arrow-left {
+      left: -2rem;
+    }
+    &.scroll-arrow-right {
+      right: -2rem;
+    }
+  }
+}
+
+.scroll-indicator {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
+
 .band-card {
-  margin: 1rem;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
   color: white;
   background-color: #0d0d0d;
   background-position: center;

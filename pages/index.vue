@@ -29,7 +29,7 @@
       </template>
     </Hero>
 
-    <Section vcenter>
+    <Section>
       <Column direction="left">
         <h2 class="subtitle is-3">
           Drummer and session musician
@@ -139,7 +139,6 @@ export default Vue.extend({
   head () {
     const title:string = this.title
     return ({
-      titleTemplate: 'Lasse Krarup - %s',
       title
     })
   }
