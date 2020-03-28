@@ -13,13 +13,14 @@
 
     <Section>
       <Column class="center-content">
-        <h2 class="subtitle is-3">
+        <h2 class="title is-3">
           Projects and bands
         </h2>
         <h2 class="subtitle is-5">
           The stuff that I tour and record with
         </h2>
-        <p class="has-text-grey scroll-indicator">
+        <Carousel :bands="bands" />
+          <!-- <p class="has-text-grey scroll-indicator">
           (Hover your cursor above the images for info and scroll vertically for more projects)
         </p>
         <div class="carousel-container">
@@ -50,7 +51,8 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
+        </h2>
       </Column>
     </Section>
 
@@ -84,13 +86,15 @@ import Vue from 'vue'
 import Hero from '~/components/Hero.vue'
 import Section from '~/components/Section.vue'
 import Column from '~/components/Column.vue'
+import Carousel from '~/components/Carousel.vue'
 
 export default Vue.extend({
 
   components: {
     Hero,
     Section,
-    Column
+    Column,
+    Carousel
   },
   data () {
     return ({
@@ -134,33 +138,30 @@ export default Vue.extend({
       ]
     })
   },
-  mounted () {
-    this.$refs.carousel.addEventListener('scroll', this.handleScroll)
-  },
-  // destroyed () {
-  //   this.$refs.carousel.removeEventListener('scroll')
+  // mounted () {
+  //   this.$refs.carousel.addEventListener('scroll', this.handleScroll)
   // },
-  methods: {
-    handleScroll (event: { target: Element }) : void {
-      if (event.target !== null) {
-        const scrollWidth = event.target.scrollWidth
-        const scrollLeft = event.target.scrollLeft
-        const clientWidth = event.target.clientWidth
+  // methods: {
+  //   handleScroll (event: { target: Element }) : void {
+  //     if (event.target !== null) {
+  //       const scrollWidth = event.target.scrollWidth
+  //       const scrollLeft = event.target.scrollLeft
+  //       const clientWidth = event.target.clientWidth
 
-        if (scrollLeft > 20) {
-          this.leftArrowActive = true
-        } else {
-          this.leftArrowActive = false
-        }
+  //       if (scrollLeft > 20) {
+  //         this.leftArrowActive = true
+  //       } else {
+  //         this.leftArrowActive = false
+  //       }
 
-        if ((scrollWidth - clientWidth - scrollLeft) > 20) {
-          this.rightArrowActive = true
-        } else {
-          this.rightArrowActive = false
-        }
-      }
-    }
-  },
+  //       if ((scrollWidth - clientWidth - scrollLeft) > 20) {
+  //         this.rightArrowActive = true
+  //       } else {
+  //         this.rightArrowActive = false
+  //       }
+  //     }
+  //   }
+  // },
   head () {
     const title:string = this.title
     return ({
@@ -178,119 +179,119 @@ export default Vue.extend({
     justify-content: center;
 }
 
-.columns {
-  @include desktop {
-    overflow-x: scroll;
-    position: relative;
-  }
-}
+// .columns {
+//   @include desktop {
+//     overflow-x: scroll;
+//     position: relative;
+//   }
+// }
 
-.band-card-container {
-  padding: 1rem;
-  width: 100%;
-  position: relative;
-  display: flex;
+// .band-card-container {
+//   padding: 1rem;
+//   width: 100%;
+//   position: relative;
+//   display: flex;
 
-}
+// }
 
-.carousel-container {
-  position: relative;
-  // contain: paint;
-}
+// .carousel-container {
+//   position: relative;
+//   // contain: paint;
+// }
 
-.scroll-arrow {
-  display: none;
+// .scroll-arrow {
+//   display: none;
 
-  @include desktop() {
-    font-size: 3rem;
-    color: white;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    min-height: 100%;
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    transition: opacity ease-in 0.2s;
+//   @include desktop() {
+//     font-size: 3rem;
+//     color: white;
+//     z-index: 1;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 3rem;
+//     min-height: 100%;
+//     position: absolute;
+//     top: 0;
+//     opacity: 0;
+//     transition: opacity ease-in 0.2s;
 
-    span {
-      border-radius: 50%;
-      background-color: rgba(0,0,0,0.8) !important;
-    }
+//     span {
+//       border-radius: 50%;
+//       background-color: rgba(0,0,0,0.8) !important;
+//     }
 
-    &.active {
-      opacity: 1;
-    }
+//     &.active {
+//       opacity: 1;
+//     }
 
-    &.scroll-arrow-left {
-      left: -2rem;
-    }
-    &.scroll-arrow-right {
-      right: -2rem;
-    }
-  }
-}
+//     &.scroll-arrow-left {
+//       left: -2rem;
+//     }
+//     &.scroll-arrow-right {
+//       right: -2rem;
+//     }
+//   }
+// }
 
-.scroll-indicator {
-  display: none;
-  @include desktop {
-    display: block;
-  }
-}
+// .scroll-indicator {
+//   display: none;
+//   @include desktop {
+//     display: block;
+//   }
+// }
 
-.band-card {
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-  color: white;
-  background-color: #0d0d0d;
-  background-position: center;
-  background-repeat: no-repeat;
-  // background-origin: padding-box;
-  background-size: contain;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
+// .band-card {
+//   flex-basis: 0;
+//   flex-grow: 1;
+//   flex-shrink: 1;
+//   color: white;
+//   background-color: #0d0d0d;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   // background-origin: padding-box;
+//   background-size: contain;
+//   position: relative;
+//   border-radius: 10px;
+//   overflow: hidden;
 
-  &::before {
-    content: "";
-    border-radius: 10px;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.7);
-    transition: all linear 0.2s;
+//   &::before {
+//     content: "";
+//     border-radius: 10px;
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0,0,0,0.7);
+//     transition: all linear 0.2s;
 
-    @include desktop() {
-      background-color: transparent;
-    }
-  }
+//     @include desktop() {
+//       background-color: transparent;
+//     }
+//   }
 
-  .card-content {
-    position: relative;
-    height: 100%;
+//   .card-content {
+//     position: relative;
+//     height: 100%;
 
-    @include desktop() {
-      transform: translateY(100%);
-      transition: all linear 0.2s;
-    }
-  }
+//     @include desktop() {
+//       transform: translateY(100%);
+//       transition: all linear 0.2s;
+//     }
+//   }
 
-  @include desktop() {
-    &:hover {
-      .card-content {
-        transform: translateY(0);
-      }
+//   @include desktop() {
+//     &:hover {
+//       .card-content {
+//         transform: translateY(0);
+//       }
 
-      &::before {
-        background-color: rgba(0,0,0,0.7);
-      }
-    }
-  }
-}
+//       &::before {
+//         background-color: rgba(0,0,0,0.7);
+//       }
+//     }
+//   }
+// }
 </style>
