@@ -4,17 +4,38 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Web Designer & Musician',
+    titleTemplate: '%s \xB7 Lasse Krarup',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'Musician, drummer and web designer. I compose, I teach music, I tour with bands, I record and I do mixing and studio tech stuff. I also design web sites and graphics.'
+      },
+      {
+        hid: 'author',
+        name: 'author',
+        content: 'Lasse Krarup'
+      },
+      {
+        hid: 'og:image', name: 'og:image', property: 'og:image', content: 'http://www.lassekrarup.com/LK-website-screenshot.jpg'
+      },
+      {
+        hid: 'msapplication', name: 'msapplication-TileColor', content: '#da532c'
+      },
+      {
+        hid: 'theme-color', name: 'theme-color', content: '#333333'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { hid: 'apple-fav', rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { hid: '32-fav', rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { hid: '16-fav', rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+      { hid: 'manifest-safari', rel: 'manifest', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
+      { hid: 'mask-icon', rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' }
+    ]
   },
   /*
    ** Customize the progress-bar color

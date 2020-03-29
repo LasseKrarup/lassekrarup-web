@@ -1,15 +1,12 @@
 <template>
   <footer class="footer">
     <div class="columns">
-      <div class="column content is-4">
+      <div id="footer-left" class="column content is-4 has-text-centered-desktop">
         <ul>
           <li v-for="(link, idx) in links" :key="idx">
             <nuxt-link :to="link.path">
               {{ link.name }}
             </nuxt-link>
-          </li>
-          <li>
-            <a class="disabled-link" href="/sitemap.xml">Sitemap</a>
           </li>
         </ul>
       </div>
@@ -25,7 +22,11 @@
           </p>
         </div>
       </div>
-      <div class="column is-4" />
+      <div class="column is-4 has-text-centered-desktop">
+        <nuxt-link to="/contact" class="button is-outlined is-success">
+          Contact me
+        </nuxt-link>
+      </div>
     </div>
   </footer>
 </template>
@@ -45,19 +46,19 @@ export default Vue.extend({
       icons: [
         {
           name: 'facebook',
-          path: '#'
+          path: 'https://www.facebook.com/latze'
         },
         {
           name: 'instagram',
-          path: '#'
+          path: 'https://www.instagram.com/clapdawg/'
         },
         {
           name: 'github',
-          path: '#'
+          path: 'https://github.com/LasseKrarup'
         },
         {
           name: 'linkedin',
-          path: '#'
+          path: 'https://www.linkedin.com/in/lasse-herold-krarup-397751180/'
         }
       ]
     })
@@ -108,4 +109,11 @@ li {
   }
 }
 
+// #footer-left {
+//   @include desktop {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
 </style>

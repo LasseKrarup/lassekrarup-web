@@ -118,17 +118,20 @@ img {
 }
 
 .nuxt-link-exact-active:not(#logo-link) {
-  // color: #aaa !important;
+  color: rgba(black, 0.5);
 
-  &::after {
-    content: "";
-    width: 80%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 1rem;
-    border-bottom: 1px solid white;
+  @include desktop {
+    color: white;
+    &::after {
+      content: "";
+      width: 80%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 1rem;
+      border-bottom: 1px solid white;
+    }
   }
 }
 </style>

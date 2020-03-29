@@ -1,5 +1,5 @@
 <template>
-  <section class="hero" :style="{'background-image': bgUrl}">
+  <section class="hero" :style="styleObject">
     <div class="hero-body">
       <div class="container animated" :class="{ 'loaded': isLoaded }">
         <div>
@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div v-if="arrow" class="arrow-down" :class="{ 'loaded': isLoaded }" />
+    <a v-if="arrow" class="arrow-down" :class="{ 'loaded': isLoaded }" href="#first-section" />
   </section>
 </template>
 
@@ -26,6 +26,10 @@ export default Vue.extend({
     background: {
       type: String,
       default: require('~/assets/img/svg/frontpage-bg-graphic.svg')
+    },
+    backgroundPosition: {
+      type: String,
+      default: undefined
     }
   },
   data () {
@@ -38,6 +42,15 @@ export default Vue.extend({
       if (this.background === undefined) { return }
 
       return ('url(' + this.background + ')')
+    },
+    styleObject () {
+      let obj: {'background-image': any, 'background-position'?: any} = { 'background-image': this.bgUrl }
+
+      if (this.backgroundPosition !== undefined) {
+        obj = { ...obj, 'background-position': this.backgroundPosition }
+      }
+
+      return obj
     }
   },
   mounted () {
@@ -96,7 +109,7 @@ div.content {
       animation-play-state: running;
     }
   }
-  text-align: justify;
+  // text-align: justify;
   padding-top: 2rem;
 
   @media screen and (min-width: $desktop){

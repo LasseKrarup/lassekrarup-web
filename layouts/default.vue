@@ -31,6 +31,10 @@ export default Vue.extend({
         path: '/webdesign'
       },
       {
+        name: 'About me',
+        path: '/about'
+      },
+      {
         name: 'Contact',
         path: '/contact'
       }

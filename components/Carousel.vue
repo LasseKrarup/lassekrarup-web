@@ -4,12 +4,12 @@
       (Hover your cursor above the images for info and scroll vertically for more projects)
     </p>
     <div class="carousel-container">
-      <div class="scroll-arrow scroll-arrow-left" :class="{'active': leftArrowActive}">
+      <div class="scroll-arrow scroll-arrow-left" :class="{'active': leftArrowActive}" @click="leftClick">
         <span class="icon is-large">
           <i class="mdi mdi-chevron-left" />
         </span>
       </div>
-      <div class="scroll-arrow scroll-arrow-right" :class="{'active': rightArrowActive}">
+      <div class="scroll-arrow scroll-arrow-right" :class="{'active': rightArrowActive}" @click="rightClick">
         <span class="icon is-large">
           <i class="mdi mdi-chevron-right" />
         </span>
@@ -74,6 +74,22 @@ export default Vue.extend({
           this.rightArrowActive = false
         }
       }
+    },
+    leftClick (event: {target: Element}) : void {
+      const carousel = this.$refs.carousel
+      // @ts-ignore
+      const scrollLeft = carousel.scrollLeft
+
+      // @ts-ignore
+      carousel.scroll({ left: scrollLeft - 500, behavior: 'smooth' })
+    },
+    rightClick (event: {target: Element}) : void {
+      const carousel = this.$refs.carousel
+      // @ts-ignore
+      const scrollLeft = carousel.scrollLeft
+
+      // @ts-ignore
+      carousel.scroll({ left: scrollLeft + 500, behavior: 'smooth' })
     }
   }
 })
@@ -135,6 +151,10 @@ export default Vue.extend({
     }
     &.scroll-arrow-right {
       right: -2rem;
+    }
+
+    &:hover {
+        cursor: pointer;
     }
   }
 }

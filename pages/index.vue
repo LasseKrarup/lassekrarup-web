@@ -29,7 +29,7 @@
       </template>
     </Hero>
 
-    <Section>
+    <Section id="first-section">
       <Column direction="left">
         <h2 class="subtitle is-3">
           Drummer and session musician
@@ -45,7 +45,7 @@
 
         <p class="content">
           <nuxt-link class="button is-outlined is-medium is-danger" to="/music">
-            Read more
+            Listen here
           </nuxt-link>
         </p>
       </Column>
@@ -139,7 +139,15 @@ export default Vue.extend({
   head () {
     const title:string = this.title
     return ({
-      title
+      title,
+      meta: [
+        {
+          hid: 'og:title', name: 'og:title', property: 'og:title', content: title
+        },
+        {
+          hid: 'og:image', name: 'og:image', property: 'og:image', content: 'http://www.lassekrarup.com/LK-website-screenshot.jpg'
+        }
+      ]
     })
   }
 })

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="87.405mm" height="59.004mm" version="1.1" viewBox="0 0 330.35 223.01" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <radialGradient id="radialGradient840" cx="-89.051" cy="134.46" r="133.8" gradientTransform="matrix(.16073 .024947 -.02682 .16743 -198.31 -53.74)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#ff4014" offset="0"/>
+   <stop stop-color="#782aff" offset="1"/>
+  </radialGradient>
+  <radialGradient id="radialGradient844" cx="43.225" cy="157.32" r="133.8" gradientTransform="matrix(-.024125 -.073965 .088546 -.029979 51.455 248.83)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#ff4014" offset="0"/>
+   <stop stop-color="#9d0bff" offset="1"/>
+  </radialGradient>
+  <linearGradient id="linearGradient870" x1="101.25" x2="8.3033" y1="42.183" y2="151.34" gradientTransform="matrix(1.9209 0 0 1.4115 10.442 -30.447)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#f67c00" stop-opacity="0" offset="0"/>
+   <stop stop-color="#c92ff4" stop-opacity=".93725" offset="1"/>
+  </linearGradient>
+  <radialGradient id="radialGradient836" cx="44.844" cy="165.08" r="133.8" gradientTransform="matrix(-.034084 -.1045 .1251 -.042354 76.537 233.9)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#ff4014" offset="0"/>
+   <stop stop-color="#7e00d2" offset="1"/>
+  </radialGradient>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(235.48 61.699)">
+  <g transform="translate(-224.14 -135.69)">
+   <rect x="-11.339" y="73.994" width="330.35" height="223.01" fill="url(#linearGradient870)"/>
+   <ellipse transform="matrix(-.60404 -.79695 .79808 -.60255 0 0)" cx="-214.99" cy="-31.463" rx="13.153" ry="13.125" fill="url(#radialGradient840)"/>
+   <ellipse transform="matrix(.94972 -.3131 .31465 .94921 0 0)" cx="62.352" cy="238.11" rx="6.1079" ry="6.1224" fill="url(#radialGradient844)"/>
+   <ellipse transform="matrix(.72975 -.68371 .6849 .72864 0 0)" cx="91.933" cy="218.75" rx="8.6292" ry="8.6496" fill="url(#radialGradient836)"/>
+  </g>
+ </g>
+</svg>
