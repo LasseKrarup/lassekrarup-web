@@ -53,7 +53,7 @@
         delay="0.5s"
         direction="right"
       >
-        <img src="~assets/img/train-lhk.jpg" alt="Lasse Krarup at Train in Aarhus">
+        <img src="~assets/img/train-lhk-min.jpg" alt="Lasse Krarup at Train in Aarhus">
       </column>
     </Section>
 
@@ -145,7 +145,7 @@ export default Vue.extend({
           hid: 'og:title', name: 'og:title', property: 'og:title', content: title
         },
         {
-          hid: 'og:image', name: 'og:image', property: 'og:image', content: 'http://www.lassekrarup.com/LK-website-screenshot.jpg'
+          hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://www.lassekrarup.com/LK-website-screenshot.jpg'
         }
       ]
     })

@@ -20,7 +20,7 @@ export default {
         content: 'Lasse Krarup'
       },
       {
-        hid: 'og:image', name: 'og:image', property: 'og:image', content: 'http://www.lassekrarup.com/LK-website-screenshot.jpg'
+        hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://www.lassekrarup.com/LK-website-screenshot.jpg'
       },
       {
         hid: 'msapplication', name: 'msapplication-TileColor', content: '#da532c'
