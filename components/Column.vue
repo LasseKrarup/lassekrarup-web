@@ -40,6 +40,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .column {
   padding: 1.5rem!important;
+  max-width: 100%;
 }
 
 .animated-left {

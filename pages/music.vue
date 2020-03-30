@@ -12,7 +12,7 @@
     </Hero>
 
     <Section>
-      <Column class="center-content">
+      <Column class="has-text-centered">
         <h2 class="title is-3">
           Projects and bands
         </h2>
@@ -97,7 +97,7 @@ export default Vue.extend({
         },
         {
           name: 'PartyModulet',
-          description: 'PartyModulet is the perfect replacement for a DJ. We play all the pop hits that DJ Spotify knows - also the knew ones. With a repertoire filled with fresh pop music, we deliver a full fledged party experience.',
+          description: 'PartyModulet is the perfect replacement for a DJ. We play all the pop hits that DJ Spotify knows - also the new ones. With a repertoire filled with fresh pop music, we deliver a full fledged party experience.',
           image: require('~/assets/img/modulet-img.jpg'),
           link: 'http://www.modulet.dk/Party/',
           cover: true

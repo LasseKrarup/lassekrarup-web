@@ -45,7 +45,7 @@
 
         <p class="content">
           <nuxt-link class="button is-outlined is-medium is-danger" to="/music">
-            Listen here
+            Listen to my music
           </nuxt-link>
         </p>
       </Column>

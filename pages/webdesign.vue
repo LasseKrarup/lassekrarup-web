@@ -37,7 +37,7 @@
         </p>
 
         <p class="content">
-          I'll give you a modern website with an intuitive user interface that will draw attention to your products. I also design logos, business cards and other graphical stuff. I get inspiration from the defining characteristics of your brand.
+          I'll give you a modern website with an intuitive user interface that will draw attention to your products. I also design logos, business cards and other graphical stuff. I identify the defining characteristics of your brand and make sure that other people see them.
         </p>
       </Column>
       <Column direction="bottom">

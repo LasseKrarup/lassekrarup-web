@@ -3,7 +3,7 @@
     <p class="has-text-grey scroll-indicator">
       (Hover your cursor above the images for info and scroll vertically for more projects)
     </p>
-    <div class="carousel-container">
+    <div class="carousel-container container">
       <div class="scroll-arrow scroll-arrow-left" :class="{'active': leftArrowActive}" @click="leftClick">
         <span class="icon is-large">
           <i class="mdi mdi-chevron-left" />
@@ -101,10 +101,14 @@ export default Vue.extend({
 }
 
 .columns {
-  @include desktop {
+  @media screen and (min-width: 769px)  {
     overflow-x: scroll;
     position: relative;
   }
+}
+
+.column {
+  max-width: 100% !important;
 }
 
 .band-card-container {
