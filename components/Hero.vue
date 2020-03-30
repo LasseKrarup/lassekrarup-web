@@ -87,26 +87,31 @@ export default Vue.extend({
   animation-fill-mode: both;
   animation-play-state: paused;
 
-  &.loaded {
-    animation-play-state: running;
-  }
+  @include desktop {
+    &.loaded {
+      animation-play-state: running;
+    }
 
-  img {
-    margin: auto;
+    img {
+      margin: auto;
 
+    }
   }
 }
 
 div.content {
-  &.animated {
-    // opacity: 0;
-    animation: 0.5s ease-in-out fadein;
-    animation-fill-mode: both;
-    animation-play-state: paused;
-    animation-delay: 0.5s;
 
-    &.loaded {
-      animation-play-state: running;
+  @include desktop {
+    &.animated {
+      // opacity: 0;
+      animation: 0.5s ease-in-out fadein;
+      animation-fill-mode: both;
+      animation-play-state: paused;
+      animation-delay: 0.5s;
+
+      &.loaded {
+        animation-play-state: running;
+      }
     }
   }
   // text-align: justify;
@@ -141,18 +146,25 @@ div.content {
   // opacity: 0;
   // transition: opacity 0.5s linear 1.5s;
 
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-delay: 0;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+
   @include desktop {
     bottom: 4rem;
+    // animation: 0.5s ease-in-out slidein-bottom;
+    animation-name: fadein, bounce;
+    animation-duration: 0.5s, 2s;
+    animation-delay: 3s, 0;
+    animation-timing-function: ease-in-out, ease-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: both;
+    animation-play-state: paused;
   }
-
-  // animation: 0.5s ease-in-out slidein-bottom;
-  animation-name: fadein, bounce;
-  animation-duration: 0.5s, 2s;
-  animation-delay: 3s, 0;
-  animation-timing-function: ease-in-out, ease-out;
-  animation-iteration-count: 1, infinite;
-  animation-fill-mode: both;
-  animation-play-state: paused;
 
   &.loaded {
     animation-play-state: running;
