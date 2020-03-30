@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <a v-if="arrow" class="arrow-down" :class="{ 'loaded': isLoaded }" href="#first-section" />
+    <a v-if="arrow" href="#first-section" class="icon arrow-down" :class="{ 'loaded': isLoaded }"><i class="mdi mdi-chevron-down" /></a>
   </section>
 </template>
 
@@ -136,19 +136,21 @@ div.content {
 
 .arrow-down {
   background-color: transparent;
-  width: 3rem;
-  height: 3rem;
-  border-bottom: 4px solid;
-  border-right: 4px solid;
-  border-color: rgba($white, 0.3);
+
+  i {
+    color: rgba(white, 0.3);
+    font-size: 5rem;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   position: absolute;
-  box-shadow: 3px 3px 2px rgba(0,0,0,0.1);
   left: 50%;
   bottom: 1rem;
-  transform: rotate(45deg) translateX(-50%);
+  transform: translateX(-50%);
   z-index: 10;
-  // opacity: 0;
-  // transition: opacity 0.5s linear 1.5s;
 
     animation-name: bounce;
     animation-duration: 2s;

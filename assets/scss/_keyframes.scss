@@ -57,22 +57,22 @@
 
 @keyframes bounce {
   0% {
-    transform: rotate(45deg) translate(-50%, 0);
+    transform: translate(-100%, 0);
   }
   80% {
-    transform: rotate(45deg) translate(-50%, 0);
+    transform: translate(-100%, 0);
   }
   85% {
-    transform: rotate(45deg) translate(calc(-50% + 0.5rem), 0.5rem);
+    transform: translate(-100%, 0.5rem);
   }
   90% {
-    transform: rotate(45deg) translate(-50%, 0);
+    transform: translate(-100%, 0);
   }
   95% {
-    transform: rotate(45deg) translate(calc(-50% + 0.5rem), 0.5rem);
+    transform: translate(-100%, 0.5rem);
   }
   100% {
-    transform: rotate(45deg) translate(-50%, 0rem);
+    transform: translate(-100%, 0rem);
   }
 }
 
