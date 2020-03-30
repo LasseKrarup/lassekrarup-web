@@ -5,7 +5,7 @@ export default {
    */
   head: {
     title: 'Web Designer & Musician',
-    titleTemplate: '%s \xB7 Lasse Krarup',
+    titleTemplate: '%s \xB7 Lasse Herold Krarup',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -35,6 +35,11 @@ export default {
       { hid: '16-fav', rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { hid: 'manifest-safari', rel: 'manifest', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
       { hid: 'mask-icon', rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' }
+    ],
+    script: [
+      {
+        src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver'
+      }
     ]
   },
   /*
