@@ -21,7 +21,7 @@
               <h2 class="subtitle is-5 has-text-white">
                 {{ band.name }}
               </h2>
-              <p class="content">
+              <p class="content has-text-justified">
                 {{ band.description }}
               </p>
               <a v-if="band.link !== undefined" class="content button is-outlined is-danger" :href="band.link" target="_blank">
