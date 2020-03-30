@@ -33,7 +33,7 @@
           I'll help you make a good first impression
         </h3>
         <p class="content">
-          Hey guys, welcome to {{ (new Date).getFullYear() }}. These are modern times - flow TV is dead, children try to swipe on any surface, and also, it's pretty important to have a nice online presence. If you want customers - be that an audience for your music or a clientel for your business - you just can't have an ugly generic looking website that you made on Wix.
+          Hey guys, welcome to {{ (new Date).getFullYear() }}. These are modern times - flow TV is dead, children try to swipe on any surface, and also, it's pretty important to have a nice online presence. If you want customers - be that an audience for your music or a clientel for your business - you just can't have an uninspiring, generic looking website that you made on Wix.
         </p>
 
         <p class="content">

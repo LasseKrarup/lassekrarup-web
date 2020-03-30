@@ -78,19 +78,19 @@ export default Vue.extend({
         },
         {
           name: 'MARCE',
-          description: 'With inspiration from both the newer Indie scene and the old folk tradition, they create a separate and unique univers. MARCE are not afraid to take their time in the music, but their refined and thourough sound keeps the audience engaged.',
+          description: 'With inspiration from both the new Indie scene and the old folk tradition, they create a separate and unique univers. MARCE are not afraid to take their time in the music, but their refined and thourough sound keeps the audience engaged.',
           image: require('~/assets/img/svg/MARCE.svg')
         },
         {
           name: 'Spraglgevær',
-          description: 'The sound of Spraglgevær is often melancholic yet energetic with inspiration from great danish songwriters such as Peter Sommer and Søren Huss. In the lyrics Spraglgevær seek to explore human interaction and why we often miscommunicate. One can expect a concert with plenty of energy, presence and recklessness.',
+          description: 'The sound of Spraglgevær is often melancholic yet energetic with inspiration from great Danish songwriters such as Peter Sommer and Søren Huss. In the lyrics Spraglgevær seek to explore human interaction and why we often miscommunicate. One can expect a concert with plenty of energy, presence and recklessness.',
           image: require('~/assets/img/spraglgevaer.jpg'),
           cover: true,
           link: 'https://www.instagram.com/spraglgevaer.music/'
         },
         {
           name: 'North Avenue',
-          description: "North Avenue is one of Denmarks greatest cover bands. With references from both the small and large stages and all kinds of events, you'll never go wrong with North Avenue.",
+          description: "North Avenue is one of Denmark's greatest cover bands. With references from both the small and large stages and all kinds of events, you'll never go wrong with North Avenue.",
           link: 'https://www.northavenue.dk',
           image: require('~/assets/img/NA-img-min.jpg'),
           cover: true
