@@ -117,6 +117,10 @@ div.content {
   // text-align: justify;
   padding-top: 2rem;
 
+  @media screen and (max-width: 1023px) {
+    padding-bottom: 3rem;
+  }
+
   @media screen and (min-width: $desktop){
     width: 60vw;
   }

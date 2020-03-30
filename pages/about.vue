@@ -6,7 +6,7 @@
           {{ title }}
         </h1>
         <h2 class="subtitle is-3">
-          ...but I design websites and logos too
+          ...but I design websites and logos&nbsp;too
         </h2>
       </template>
     </Hero>
@@ -14,10 +14,10 @@
     <Section>
       <Column>
         <h2 class="title is-3">
-          I play drums and design websites
+          I play drums and design&nbsp;websites
         </h2>
         <h3 class="subtitle is-5">
-          And I'm also a pretty nice guy in general
+          And I'm also a pretty nice guy in&nbsp;general
         </h3>
 
         <p class="content">
@@ -63,7 +63,7 @@ export default Vue.extend({
   },
   data () {
     return {
-      title: "My name is Lasse, and I'm a musician",
+      title: "My name is Lasse, and I'm a\xA0musician",
       images: [require('~/assets/img/lk-portrait.jpg')]
     }
   },

@@ -6,7 +6,7 @@
           {{ title }}
         </h1>
         <h2 class="subtitle is-3">
-          ...and I design websites and graphics for musicians and stuff
+          ...and I design websites and graphics for musicians and&nbsp;stuff
         </h2>
       </template>
     </Hero>
@@ -17,7 +17,7 @@
           Stuff I designed
         </h2>
         <h3 class="subtitle is-5">
-          Go ahead and check it out - most of it is online!
+          Go ahead and check it out - most of it is&nbsp;online!
         </h3>
 
         <Tiles :tiles="websites" />

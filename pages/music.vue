@@ -6,7 +6,7 @@
           {{ title }}
         </h1>
         <h2 class="subtitle is-3">
-          ...drummer, composer, session musician and teacher
+          ...drummer, composer, session musician and&nbsp;teacher
         </h2>
       </template>
     </Hero>
@@ -17,7 +17,7 @@
           Projects and bands
         </h2>
         <h2 class="subtitle is-5">
-          The stuff that I tour and record with
+          The stuff that I tour and record&nbsp;with
         </h2>
         <Carousel :bands="bands" />
       </Column>

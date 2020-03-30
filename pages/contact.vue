@@ -6,7 +6,7 @@
           {{ title }}
         </h1>
         <h2 class="subtitle is-3">
-          ...or just for a quick chat. Don't be shy.
+          ...or just for a quick chat. Don't be&nbsp;shy.
         </h2>
       </template>
     </Hero>
@@ -14,10 +14,10 @@
     <Section>
       <Column>
         <h2 class="title is-3">
-          Feel free to contact me
+          Feel free to contact&nbsp;me
         </h2>
         <h3 class="subtitle is-5">
-          or check me out on any of these platforms
+          or check me out on any of these&nbsp;platforms
         </h3>
 
         <p class="content">
@@ -48,7 +48,7 @@ export default Vue.extend({
   },
   data () {
     return {
-      title: 'Contact me for music related stuff or web design',
+      title: 'Contact me for music related stuff or web\xA0design',
       contacts: [
         {
           icon: 'email-outline',
@@ -116,7 +116,9 @@ i {
 }
 
 .icon {
-  margin-left: 2rem;
+  @include desktop {
+    margin-left: 2rem;
+  }
   margin-right: 1rem;
 }
 </style>

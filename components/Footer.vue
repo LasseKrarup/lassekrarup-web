@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="columns">
-      <div id="footer-left" class="column content is-4 has-text-centered-desktop">
+      <div id="footer-left" class="column content is-4 has-text-centered">
         <ul>
           <li v-for="(link, idx) in links" :key="idx">
             <nuxt-link :to="link.path">
@@ -22,7 +22,7 @@
           </p>
         </div>
       </div>
-      <div class="column is-4 has-text-centered-desktop">
+      <div class="column is-4 has-text-centered">
         <nuxt-link to="/contact" class="button is-outlined is-success">
           Contact me
         </nuxt-link>

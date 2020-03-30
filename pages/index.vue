@@ -11,7 +11,7 @@
         </h1>
 
         <h2 class="subtitle is-3 has-text-centered">
-          I'm a musician and a web designer
+          I'm a musician and a web&nbsp;designer
         </h2>
 
         <div class="columns content is-vcentered">
@@ -101,7 +101,7 @@ export default Vue.extend({
   },
   data () {
     return ({
-      title: 'Become seen. And heard.',
+      title: 'Become\xA0seen. And\xA0heard.',
       images: [
         require('~/assets/img/svg/swatch.svg'),
         require('~/assets/img/svg/frontpage-bg-graphic.svg')
