@@ -34,7 +34,7 @@
           </h2>
 
           <p class="content">
-            If you like my stuff, don't hesitate to contact me for lessons. I do lessons in both Aalborg and Aarhus (DK) as well as video lessons online.
+            If you like my music, don't hesitate to contact me for lessons. I do lessons in both Aalborg and Aarhus (DK) as well as video lessons online.
           </p>
           <p class="content">
             I like to focus on <i>musicality</i> above all. All the technique and speed in the world is useless if you don't know how to play music. Of course I teach technique as well, but there's always a focus towards using technical skills musically.

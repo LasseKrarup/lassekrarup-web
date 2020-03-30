@@ -6,7 +6,7 @@
           {{ title }}
         </h1>
         <h2 class="subtitle is-3">
-          ...and I design websites and graphics for musicians and&nbsp;stuff
+          ...and I design websites and graphics for musicians and&nbsp;businesses
         </h2>
       </template>
     </Hero>
@@ -14,7 +14,7 @@
     <Section>
       <Column class="center-content has-text-centered">
         <h2 class="title is-3">
-          Stuff I designed
+          Websites I designed
         </h2>
         <h3 class="subtitle is-5">
           Go ahead and check it out - most of it is&nbsp;online!
@@ -37,11 +37,11 @@
         </p>
 
         <p class="content">
-          I'll give you a modern website with an intuitive user interface that will draw attention to your products. I also design logos, business cards and other graphical stuff. I identify the defining characteristics of your brand and make sure that other people see them.
+          I'll give you a modern website with an intuitive user interface that will draw attention to your products. I also design logos, business cards and other graphical elements. I identify the defining characteristics of your brand and make sure that other people see them.
         </p>
       </Column>
       <Column direction="bottom">
-        <img src="~/assets/img/inkscape-work-screenshot.jpg" width="100%" height="auto" alt="Graphics design process 2">
+        <img src="~/assets/img/inkscape-work-screenshot.jpg" width="100%" height="auto" alt="Graphics design process 2" style="margin-top: 10px">
       </Column>
     </Section>
   </div>

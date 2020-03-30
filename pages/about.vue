@@ -17,7 +17,7 @@
           I play drums and design&nbsp;websites
         </h2>
         <h3 class="subtitle is-5">
-          And I'm also a pretty nice guy in&nbsp;general
+          and I'm also both friendly and&nbsp;professional
         </h3>
 
         <p class="content">

@@ -35,11 +35,11 @@
           Drummer and session musician
         </h2>
         <p class="content">
-          I've been playing drums since I was 10 years old and along the way I have picked up skills and experiences in drumming as well as composition, band leading, studio recording and gigging. I play more than 40 concerts a year with my different bands and projects.
+          I've been playing drums since I was 10 years old and along the way I have picked up skills and experiences in drumming as well as composition, band leading, studio recording and gigging. I study at the Royal Academy of Music, Aalborg, and I play more than 40 concerts a year with my different bands and projects.
         </p>
 
         <p class="content">
-          I'm a gear nerd and I'm pretty tech savvy - I used to study electronical engineering, and I build music related tech stuff as well. Amplifiers, speakers, effect pedals... <br>
+          I'm a gear nerd and I'm pretty tech savvy - I used to study electronical engineering, and I build music related tech as well. Amplifiers, speakers, effect pedals... <br>
           I do tracking, studio engineering and mixing as well.
         </p>
 
@@ -53,7 +53,7 @@
         delay="0.5s"
         direction="right"
       >
-        <img src="~assets/img/train-lhk-min.jpg" alt="Lasse Krarup at Train in Aarhus">
+        <img src="~assets/img/train-lhk-min.jpg" alt="Lasse Krarup at Train in Aarhus" style="margin-top: 10px">
       </column>
     </Section>
 

@@ -48,7 +48,7 @@ export default Vue.extend({
   },
   data () {
     return {
-      title: 'Contact me for music related stuff or web\xA0design',
+      title: 'Contact me for music related inquiries or web\xA0design',
       contacts: [
         {
           icon: 'email-outline',

@@ -86,7 +86,8 @@ export default Vue.extend({
     background-color: transparent !important;
   }
   &.is-info {
-    background-color: rgba($info, 0.9);
+    background-color: #340e73;
+    opacity: 0.9;
   }
 
   &.has-scrolled {
