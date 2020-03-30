@@ -99,7 +99,7 @@ export default Vue.extend({
           hid: 'og:title', name: 'og:title', property: 'og:title', content: title
         },
         {
-          hid: 'og:image', name: 'og:image', property: 'og:image', content: 'http://www.lassekrarup.com/LK-website-screenshot.jpg'
+          hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://www.lassekrarup.com/LK-website-screenshot.jpg'
         }
       ]
     })
