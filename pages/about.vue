@@ -25,7 +25,7 @@
         </p>
 
         <p class="content">
-          I've been playing music since I was 10 years old. I've been hooked on drums since before I could play them. What fascinates me about drums are the fact that you can create music and melodies with something that doesn't necessarily involve perfectly pitched notes.
+          I've been playing music since I was 10 years old. I've been hooked on drums since before I could play them. What fascinates me about drums is the fact that you can create music and melodies with something that doesn't necessarily involve perfectly pitched notes.
         </p>
 
         <p class="content">
