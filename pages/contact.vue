@@ -84,7 +84,7 @@ export default Vue.extend({
     }
   },
   head () {
-    const title:string = this.title
+    const title:string = 'Contact me to go online fast and easy'
     return ({
       title,
       meta: [

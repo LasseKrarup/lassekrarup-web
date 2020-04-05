@@ -17,7 +17,7 @@
           Websites I designed
         </h2>
         <h3 class="subtitle is-5">
-          Go ahead and check it out - most of it is&nbsp;online!
+          Go ahead and check it out - most of my designs are&nbsp;online!
         </h3>
 
         <Tiles :tiles="websites" />
@@ -90,13 +90,14 @@ export default Vue.extend({
           name: 'Anders Boye Knudsen',
           description: 'Bass player from Aalborg, DK',
           image: require('~/assets/img/ABK-website-screenshot.jpg'),
-          class: 'is-6'
+          class: 'is-6',
+          link: 'http://andersboyeknudsen.dk'
         }
       ]
     }
   },
   head () {
-    const title:string = this.title
+    const title:string = 'Modern and elegant web design'
     return ({
       title,
       meta: [

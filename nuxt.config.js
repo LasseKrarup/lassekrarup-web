@@ -5,7 +5,7 @@ export default {
    */
   head: {
     title: 'Web Designer & Musician',
-    titleTemplate: '%s \xB7 Lasse Herold Krarup',
+    titleTemplate: '%s \xB7 Lasse Herold Krarup \xB7 Musician and web designer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

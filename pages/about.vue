@@ -88,7 +88,7 @@ export default Vue.extend({
     }
   },
   head () {
-    const title:string = this.title
+    const title:string = 'Drum lessons & Web design'
     return ({
       title,
       meta: [

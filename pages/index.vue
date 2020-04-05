@@ -139,6 +139,7 @@ export default Vue.extend({
   head () {
     const title:string = this.title
     return ({
+      titleTemplate: 'Lasse Herold Krarup \xB7 Musician and web designer \xB7 %s',
       title,
       meta: [
         {
