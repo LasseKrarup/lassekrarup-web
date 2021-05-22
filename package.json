@@ -13,19 +13,21 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
-    "@nuxtjs/bulma": "^1.2.1",
     "@nuxtjs/style-resources": "^1.0.0",
-    "nuxt": "^2.0.0",
-    "nuxt-buefy": "^0.3.24"
+    "core-js": "^3",
+    "nuxt": "^2.15.6",
+    "nuxt-buefy": "^0.4.7",
+    "webpack": "^4.46.0"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^0.6.0",
-    "@nuxtjs/eslint-config": "^2.0.0",
-    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxt/types": "^2.15.6",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/eslint-config": "^6.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
     "babel-eslint": "^10.0.1",
-    "eslint": "^6.1.0",
+    "eslint": "^7.27.0",
     "eslint-plugin-nuxt": ">=0.4.2",
-    "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.2"
+    "node-sass": "^6.0",
+    "sass-loader": "^10.1.1"
   }
 }
